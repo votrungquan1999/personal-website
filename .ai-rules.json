@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "agent": "cursor",
+  "categories": [
+    "brainstorming-patterns",
+    "component-architecture",
+    "database-patterns",
+    "meta-rules",
+    "react-hooks",
+    "react-server-components",
+    "styling-tailwind",
+    "typescript-conventions",
+    "url-state-management"
+  ]
+}
