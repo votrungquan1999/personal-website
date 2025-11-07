@@ -1,0 +1,4 @@
+name: personal-website-infrastructure
+runtime: nodejs
+description: Infrastructure as Code for personal website deployment to Vercel with Cloudflare DNS
+
