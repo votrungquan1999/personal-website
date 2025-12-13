@@ -47,3 +47,5 @@ next-env.d.ts
 Pulumi.*.yaml
 .pulumi/
 infrastructure/node_modules/
+
+chrome
