@@ -9,12 +9,6 @@ import {
   CardTitle,
 } from "src/components/ui/card";
 import { Separator } from "src/components/ui/separator";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "src/components/ui/accordion";
 import { getProjectIcon, getTechIcon } from "src/lib/tech-icons";
 import { Calendar, MapPin } from "lucide-react";
 import type { Experience } from "src/data/resume";
@@ -87,7 +81,7 @@ export function ExperienceList({ experiences }: ExperienceListProps) {
                   Key Achievements
                 </h4>
                 <ul className="space-y-2 text-sm text-card-foreground">
-                  {exp.achievements.slice(0, 3).map((achievement, idx) => (
+                  {exp.achievements.map((achievement, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-2 leading-relaxed"
@@ -96,35 +90,6 @@ export function ExperienceList({ experiences }: ExperienceListProps) {
                       <span>{achievement}</span>
                     </li>
                   ))}
-                  {exp.achievements.length > 3 && (
-                    <Accordion type="single" collapsible className="mt-4">
-                      <AccordionItem
-                        value="more-achievements"
-                        className="border-0"
-                      >
-                        <AccordionTrigger className="text-sm py-2 hover:no-underline">
-                          View {exp.achievements.length - 3} more achievements
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <ul className="space-y-2 text-sm text-card-foreground">
-                            {exp.achievements
-                              .slice(3)
-                              .map((achievement, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start gap-2 leading-relaxed"
-                                >
-                                  <span className="text-primary mt-1 font-bold">
-                                    •
-                                  </span>
-                                  <span>{achievement}</span>
-                                </li>
-                              ))}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  )}
                 </ul>
               </div>
               {exp.projects && exp.projects.length > 0 && (

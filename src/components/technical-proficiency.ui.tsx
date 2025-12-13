@@ -21,7 +21,7 @@ export function TechnicalProficiencyGrid({
   categories,
 }: TechnicalProficiencyGridProps) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       {categories.map((category, categoryIndex) => (
         <div
           key={category.name}
@@ -32,11 +32,11 @@ export function TechnicalProficiencyGrid({
           }}
         >
           <Card className="border-border shadow-sm">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-xl">{category.name}</CardTitle>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-base font-semibold">{category.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {category.technologies.map((tech) => {
                   const TechIcon = getTechIcon(tech);
                   return (
@@ -44,12 +44,12 @@ export function TechnicalProficiencyGrid({
                       key={tech}
                       variant="secondary"
                       className={cn(
-                        "text-sm px-4 py-2 flex items-center gap-2",
-                        "transition-all duration-300 hover:scale-110 hover:shadow-md",
+                        "text-xs px-3 py-1.5 flex items-center gap-1.5",
+                        "transition-all duration-300 hover:scale-105 hover:shadow-sm",
                         "cursor-default",
                       )}
                     >
-                      <TechIcon className="size-4" />
+                      <TechIcon className="size-3.5" />
                       {tech}
                     </Badge>
                   );
