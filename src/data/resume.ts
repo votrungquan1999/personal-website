@@ -130,11 +130,34 @@ export const resumeData: ResumeData = {
   ],
   featuredProjects: [
     {
+      name: "Jerni",
+      description:
+        "Built event sourcing library that consumes events and transforms them into denormalized data, enabling flexible schema changes without breaking dependent systems.",
+      technologies: ["TypeScript", "Event Sourcing", "MongoDB", "PostgreSQL"],
+      keyMetrics: [
+        "60% faster deployments",
+        "Zero-downtime migrations",
+        "Flexible schema evolution",
+        "Open source library",
+      ],
+      achievements: [
+        "Created event sourcing library that enables safe database schema changes without breaking other systems",
+        "Allowed teams to evolve data models independently, eliminating deployment coupling",
+        "Reduced developer fear of breaking changes through event-driven architecture",
+      ],
+      company: "Bodidata",
+    },
+    {
       name: "Bodimatch",
       description:
-        "An accessible internal tool for complex fitting functions, improving data accuracy and processing performance significantly.",
+        "Built accessible internal tool with web workers for background processing, enabling real-time visualization that improved accuracy by 45% and processing speed by 90%.",
       technologies: ["Next.js", "TypeScript", "Web Workers", "MongoDB"],
-      keyMetrics: ["45% data accuracy improvement", "90% faster processing"],
+      keyMetrics: [
+        "45% data accuracy improvement",
+        "99% UI freeze reduction",
+        "Real-time visualization",
+        "Accessible interface",
+      ],
       achievements: [
         "Developed an accessible internal tool for complex fitting functions, improving data accuracy by 45%",
         "Optimized performance by using web worker resulting in 90% faster data processing and visualization",
@@ -144,7 +167,7 @@ export const resumeData: ResumeData = {
     {
       name: "Partners Portal",
       description:
-        "A fully accessible client portal with 100% keyboard navigation, automated workflows, and optimized API performance.",
+        "Built fully accessible client portal with 100% keyboard navigation and multi-layer caching, achieving 60% API improvement and 50% satisfaction increase.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -156,6 +179,8 @@ export const resumeData: ResumeData = {
         "100% keyboard navigation",
         "60% API improvement",
         "50% satisfaction increase",
+        "70% load time reduction",
+        "WCAG 2.1 compliant",
       ],
       achievements: [
         "Built a client portal with accessibility in mind with 100% keyboard navigation for the keys features",
@@ -167,11 +192,12 @@ export const resumeData: ResumeData = {
     {
       name: "Cross-border Tools",
       description:
-        "Warehouse management tools that significantly reduced training time and manual data entry through efficient design and automation.",
+        "Designed intuitive warehouse scanning interface with smart defaults that reduced interactions by 80%, cutting training time in half and manual entry by 70%.",
       technologies: ["Next.js", "React", "TypeScript", "MySQL", "Golang"],
       keyMetrics: [
+        "80% interaction reduction",
         "50% training reduction",
-        "70% entry time saved",
+        "70% less manual entry",
         "55% efficiency gain",
       ],
       achievements: [
@@ -185,17 +211,22 @@ export const resumeData: ResumeData = {
   technicalProficiency: [
     {
       name: "Frontend Engineering",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Radix UI", "Shadcn UI", "Web Workers"],
     },
     {
       name: "Backend Engineering",
-      technologies: ["Go", "Node.js", "REST APIs", "GraphQL"],
+      technologies: ["Go", "Node.js", "REST APIs", "GraphQL", "Microservices", "Event-Driven Architecture"],
     },
     {
-      name: "Others",
+      name: "Data & Infrastructure",
       technologies: [
         "SQL Databases",
         "NoSQL Databases",
+        "Redis",
+        "Docker",
+        "Git",
+        "Vercel",
+        "Pulumi",
         "CI/CD workflows",
         "Mobile Development",
       ],
@@ -205,7 +236,7 @@ export const resumeData: ResumeData = {
     {
       title: "User-Centered Product Design",
       description:
-        "Expertise in translating complex business requirements into intuitive user experiences, with a focus on accessibility and measurable outcomes.",
+        "I design solutions by understanding user pain points first, creating intuitive experiences that people naturally understand.",
       achievements: [
         "Designed a new tool to reduce required interactions by 80% to complete core tasks by analyzing customer workflows",
         "Discovered the user's pain points and designed new features to address them significantly increasing the customer satisfaction",
@@ -215,7 +246,7 @@ export const resumeData: ResumeData = {
     {
       title: "UI Engineering Excellence",
       description:
-        "Specializes in creating performant, accessible, and maintainable frontend architectures using modern web technologies.",
+        "I build accessible, performant interfaces using modern web standards—accessibility built in from day one.",
       achievements: [
         "Engineered accessibility-focused tools that reduced user input time by 30% while minimizing human error rates",
         "Implemented intentional loading states that reduce anxiety and increase user satisfaction",
@@ -224,7 +255,7 @@ export const resumeData: ResumeData = {
     {
       title: "Backend Engineering",
       description:
-        "Expert in designing and implementing scalable backend systems with a focus on performance optimization and system maintainability.",
+        "I design systems that are fast for users and maintainable for developers—solving problems for customers, systems, and teams.",
       achievements: [
         "Improved load times by 70% through caching, query optimization, and database normalization",
         "Utilized event-driven architecture to increase data consistency and the reduce the error resolution time by 60%",
@@ -233,7 +264,7 @@ export const resumeData: ResumeData = {
     {
       title: "AI Early Adopter",
       description:
-        "Pioneer in leveraging AI tools for enhanced development productivity and product innovation, with 3+ years of experience integrating AI into development workflows and product design processes.",
+        "Early GitHub Copilot adopter (2022). I mentor teams and establish best practices that multiply productivity.",
       achievements: [
         "Early GitHub Copilot adopter (2022), achieving 40% faster development and reducing repetitive tasks",
         "Integrated Cursor's agentic AI tools for streamlined refactoring and accelerated feature development",
