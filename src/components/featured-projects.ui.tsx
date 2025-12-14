@@ -11,7 +11,7 @@ import { getProjectIcon, getTechIcon } from "src/lib/tech-icons";
 import { cn } from "src/lib/utils";
 
 interface FeaturedProjectsGridProps {
-  projects: FeaturedProject[];
+  projects: readonly FeaturedProject[];
 }
 
 /**

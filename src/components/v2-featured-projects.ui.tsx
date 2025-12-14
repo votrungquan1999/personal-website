@@ -1,15 +1,8 @@
 import { Badge } from "src/components/ui/badge";
-
-interface FeaturedProject {
-  name: string;
-  description: string;
-  company: string;
-  technologies: string[];
-  keyMetrics: string[];
-}
+import type { FeaturedProject } from "src/data/resume";
 
 interface V2FeaturedProjectsUIProps {
-  projects: FeaturedProject[];
+  projects: readonly FeaturedProject[];
 }
 
 export function V2FeaturedProjectsUI({ projects }: V2FeaturedProjectsUIProps) {
@@ -41,11 +34,7 @@ export function V2FeaturedProjectsUI({ projects }: V2FeaturedProjectsUIProps) {
               {/* Technologies */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
-                  <Badge
-                    key={tech}
-                    variant="secondary"
-                    className="text-xs"
-                  >
+                  <Badge key={tech} variant="secondary" className="text-xs">
                     {tech}
                   </Badge>
                 ))}
