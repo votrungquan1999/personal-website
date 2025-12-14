@@ -7,7 +7,12 @@ import {
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "src/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "src/components/ui/card";
 
 interface Step {
   title: string;
@@ -45,7 +50,9 @@ export function V1ProblemSolvingUI({ steps }: V1ProblemSolvingUIProps) {
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
-                      <CardTitle className="text-xl max-md:text-lg">{step.title}</CardTitle>
+                      <CardTitle className="text-xl max-md:text-lg">
+                        {step.title}
+                      </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>

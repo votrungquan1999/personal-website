@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { Button } from "src/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "src/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "src/components/ui/card";
 import { ThemeToggle } from "src/components/theme-toggle";
 import { resumeData } from "src/data/resume";
 import { ArrowRight } from "lucide-react";
@@ -33,7 +39,10 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <Button asChild size="lg" className="w-full group">
-              <Link href="/portfolio" className="flex items-center justify-center gap-2">
+              <Link
+                href="/portfolio"
+                className="flex items-center justify-center gap-2"
+              >
                 Get Started
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>

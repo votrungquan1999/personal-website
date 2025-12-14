@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { Card, CardDescription, CardHeader, CardTitle } from "src/components/ui/card";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "src/components/ui/card";
 
 const portfolioVariants = [
   {

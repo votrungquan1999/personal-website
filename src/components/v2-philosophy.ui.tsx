@@ -9,10 +9,7 @@ interface V2PhilosophyUIProps {
   principles: Principle[];
 }
 
-export function V2PhilosophyUI({
-  heading,
-  principles,
-}: V2PhilosophyUIProps) {
+export function V2PhilosophyUI({ heading, principles }: V2PhilosophyUIProps) {
   return (
     <section className="mb-20 max-md:mb-16">
       <h2 className="text-3xl font-bold text-foreground mb-8 max-lg:text-2xl max-md:text-xl max-md:mb-6">

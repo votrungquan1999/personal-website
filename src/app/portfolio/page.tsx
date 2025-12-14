@@ -15,7 +15,8 @@ export default function PortfolioPage() {
         <div className="text-center mb-12 space-y-3">
           <h1 className="text-3xl font-bold">How would you like to explore?</h1>
           <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-            All data is the same, just different layouts optimized for different reading preferences
+            All data is the same, just different layouts optimized for different
+            reading preferences
           </p>
         </div>
 

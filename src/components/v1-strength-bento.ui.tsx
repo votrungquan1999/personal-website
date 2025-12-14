@@ -97,7 +97,9 @@ export function V1StrengthBentoUI({ strengths }: V1StrengthBentoUIProps) {
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <DialogTitle className="text-2xl">{strength.title}</DialogTitle>
+                    <DialogTitle className="text-2xl">
+                      {strength.title}
+                    </DialogTitle>
                   </div>
                   <DialogDescription className="text-base leading-relaxed text-card-foreground">
                     {strength.description}

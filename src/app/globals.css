@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -123,7 +123,9 @@ body {
 
 /* Utility classes for animations */
 .animate-in {
-  animation: fade-in 0.6s ease-out, slide-in-from-bottom 0.6s ease-out;
+  animation:
+    fade-in 0.6s ease-out,
+    slide-in-from-bottom 0.6s ease-out;
 }
 
 /* Smooth scroll behavior */

@@ -1,7 +1,12 @@
 "use client";
 
 import { Target, Zap, Server, Sparkles, type LucideIcon } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "src/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "src/components/ui/card";
 import { Badge } from "src/components/ui/badge";
 
 interface Project {
@@ -100,7 +105,11 @@ export function V1ProjectsByStrengthUI({
                       <div className="pt-3 border-t border-border">
                         <div className="flex flex-wrap gap-1.5">
                           {project.technologies.map((tech, i) => (
-                            <Badge key={i} variant="secondary" className="text-xs">
+                            <Badge
+                              key={i}
+                              variant="secondary"
+                              className="text-xs"
+                            >
                               {tech}
                             </Badge>
                           ))}

@@ -39,7 +39,9 @@ export function V4StrengthsProjectsUI({ pairs }: V4StrengthsProjectsUIProps) {
             <CardContent className="p-5 max-md:p-4">
               {/* Strength header */}
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border max-md:mb-3 max-md:pb-2">
-                <span className="text-2xl max-md:text-xl">{pair.strength.icon}</span>
+                <span className="text-2xl max-md:text-xl">
+                  {pair.strength.icon}
+                </span>
                 <span className="text-base font-bold text-primary max-md:text-sm">
                   {pair.strength.title}
                 </span>

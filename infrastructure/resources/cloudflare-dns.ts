@@ -47,4 +47,3 @@ export function createCloudflareDnsRecords() {
     wwwRecord: wwwDnsRecord,
   };
 }
-

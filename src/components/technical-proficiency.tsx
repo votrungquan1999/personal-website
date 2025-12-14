@@ -18,9 +18,7 @@ export function TechnicalProficiency() {
       <h2 className="text-3xl font-bold mb-8 text-center max-lg:text-2xl max-md:text-xl max-md:mb-6">
         Tools & Technologies
       </h2>
-      <TechnicalProficiencyGrid
-        categories={resumeData.technicalProficiency}
-      />
+      <TechnicalProficiencyGrid categories={resumeData.technicalProficiency} />
     </section>
   );
 }

@@ -16,7 +16,12 @@ interface V2HeroUIProps {
   };
 }
 
-export function V2HeroUI({ name, statement, taglines, contact }: V2HeroUIProps) {
+export function V2HeroUI({
+  name,
+  statement,
+  taglines,
+  contact,
+}: V2HeroUIProps) {
   return (
     <section className="mb-20 max-md:mb-16">
       {/* Name */}
@@ -42,12 +47,7 @@ export function V2HeroUI({ name, statement, taglines, contact }: V2HeroUIProps) 
 
       {/* Contact Buttons */}
       <div className="flex flex-wrap gap-3 max-md:gap-2">
-        <Button
-          asChild
-          variant="outline"
-          size="default"
-          className="shadow-sm"
-        >
+        <Button asChild variant="outline" size="default" className="shadow-sm">
           <a
             href={`mailto:${contact.email}`}
             className="flex items-center gap-2"
@@ -56,26 +56,13 @@ export function V2HeroUI({ name, statement, taglines, contact }: V2HeroUIProps) 
             Email
           </a>
         </Button>
-        <Button
-          asChild
-          variant="outline"
-          size="default"
-          className="shadow-sm"
-        >
-          <a
-            href={`tel:${contact.phone}`}
-            className="flex items-center gap-2"
-          >
+        <Button asChild variant="outline" size="default" className="shadow-sm">
+          <a href={`tel:${contact.phone}`} className="flex items-center gap-2">
             <Phone className="size-4" />
             Phone
           </a>
         </Button>
-        <Button
-          asChild
-          variant="outline"
-          size="default"
-          className="shadow-sm"
-        >
+        <Button asChild variant="outline" size="default" className="shadow-sm">
           <a
             href={`https://${contact.github}`}
             target="_blank"
@@ -86,12 +73,7 @@ export function V2HeroUI({ name, statement, taglines, contact }: V2HeroUIProps) 
             GitHub
           </a>
         </Button>
-        <Button
-          asChild
-          variant="outline"
-          size="default"
-          className="shadow-sm"
-        >
+        <Button asChild variant="outline" size="default" className="shadow-sm">
           <a
             href={`https://${contact.linkedin}`}
             target="_blank"
@@ -102,12 +84,7 @@ export function V2HeroUI({ name, statement, taglines, contact }: V2HeroUIProps) 
             LinkedIn
           </a>
         </Button>
-        <Button
-          asChild
-          variant="outline"
-          size="default"
-          className="shadow-sm"
-        >
+        <Button asChild variant="outline" size="default" className="shadow-sm">
           <Link
             href="/resume.pdf"
             download

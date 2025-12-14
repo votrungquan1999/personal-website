@@ -33,7 +33,9 @@ export function TechnicalProficiencyGrid({
         >
           <Card className="border-border shadow-sm">
             <CardHeader className="pb-3">
-              <CardTitle className="text-base font-semibold">{category.name}</CardTitle>
+              <CardTitle className="text-base font-semibold">
+                {category.name}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
