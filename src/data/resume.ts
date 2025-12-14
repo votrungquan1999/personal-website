@@ -64,10 +64,10 @@ export interface ImpactMetric {
 export interface FeaturedProject {
   name: string;
   description: string;
-  technologies: string[];
-  keyMetrics: string[];
-  achievements: string[];
-  company?: string;
+  technologies: readonly string[];
+  keyMetrics: readonly string[];
+  achievements: readonly string[];
+  company: string;
 }
 
 export interface Testimonial {
@@ -86,7 +86,7 @@ export interface ResumeData {
   impactMetrics: ImpactMetric[];
   technicalProficiency: TechnicalCategory[];
   coreStrengths: CoreStrength[];
-  featuredProjects: FeaturedProject[];
+  featuredProjects: readonly FeaturedProject[];
   experience: Experience[];
   freelanceWork: FreelanceWork[];
   education: Education;
@@ -207,15 +207,30 @@ export const resumeData: ResumeData = {
       ],
       company: "Ninja Van",
     },
-  ],
+  ] as const,
   technicalProficiency: [
     {
       name: "Frontend Engineering",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Radix UI", "Shadcn UI", "Web Workers"],
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI",
+        "Shadcn UI",
+        "Web Workers",
+      ],
     },
     {
       name: "Backend Engineering",
-      technologies: ["Go", "Node.js", "REST APIs", "GraphQL", "Microservices", "Event-Driven Architecture"],
+      technologies: [
+        "Go",
+        "Node.js",
+        "REST APIs",
+        "GraphQL",
+        "Microservices",
+        "Event-Driven Architecture",
+      ],
     },
     {
       name: "Data & Infrastructure",
