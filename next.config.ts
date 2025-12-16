@@ -17,6 +17,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "finance-calculator-lac.vercel.app",
       },
+      {
+        protocol: "https",
+        hostname: "nghiep-hung-website-lilac-zeta.vercel.app",
+      },
+      {
+        protocol: "https",
+        hostname: "ai-rules-setup-aoj54y51z-votrungquan1999s-projects.vercel.app",
+      },
     ],
   },
 };
