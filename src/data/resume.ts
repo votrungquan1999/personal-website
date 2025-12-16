@@ -416,8 +416,7 @@ export const resumeData: ResumeData = {
       technologies: ["Next.js", "TypeScript", "MongoDB", "AWS S3"],
       url: "https://nghiephung.vn",
       githubUrl: "https://github.com/votrungquan1999/nghiep-hung-website",
-      ogImageUrl:
-        "https://nghiep-hung-website-lilac-zeta.vercel.app/construction_placeholder.png",
+      ogImageUrl: "https://nghiephung.vn/construction_placeholder.png",
     },
     {
       name: "Stem Venture Landing",
@@ -450,8 +449,7 @@ export const resumeData: ResumeData = {
       technologies: ["TypeScript", "Next.js", "MongoDB", "CLI"],
       url: "https://ai-rule.quanvo.dev",
       githubUrl: "https://github.com/votrungquan1999/ai-rules-setup",
-      ogImageUrl:
-        "https://ai-rules-setup-aoj54y51z-votrungquan1999s-projects.vercel.app/ai-rules-og.png",
+      ogImageUrl: "https://ai-rule.quanvo.dev/ai-rules-og.png",
     },
     {
       name: "Finance Calculator",
@@ -462,8 +460,7 @@ export const resumeData: ResumeData = {
       technologies: ["Next.js", "TypeScript", "Charts"],
       url: "https://fin-cal.quanvo.dev",
       githubUrl: "https://github.com/votrungquan1999/finance-calculator",
-      ogImageUrl:
-        "https://finance-calculator-lac.vercel.app/finance_cal_og.png",
+      ogImageUrl: "https://fin-cal.quanvo.dev/finance_cal_og.png",
     },
   ] as const,
 };

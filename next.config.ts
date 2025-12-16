@@ -15,15 +15,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "finance-calculator-lac.vercel.app",
+        hostname: "nghiephung.vn",
       },
       {
         protocol: "https",
-        hostname: "nghiep-hung-website-lilac-zeta.vercel.app",
+        hostname: "ai-rule.quanvo.dev",
       },
       {
         protocol: "https",
-        hostname: "ai-rules-setup-aoj54y51z-votrungquan1999s-projects.vercel.app",
+        hostname: "fin-cal.quanvo.dev",
       },
     ],
   },
