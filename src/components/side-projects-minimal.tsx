@@ -6,13 +6,13 @@ import { resumeData } from "src/data/resume";
  * Server component showing brief project list with thumbnails
  */
 export function SideProjectsMinimal() {
-	if (!resumeData.sideProjects || resumeData.sideProjects.length === 0) {
-		return null;
-	}
+  if (!resumeData.sideProjects || resumeData.sideProjects.length === 0) {
+    return null;
+  }
 
-	return (
-		<section className="mb-20 max-md:mb-16">
-			<SideProjectsMinimalUI projects={resumeData.sideProjects} />
-		</section>
-	);
+  return (
+    <section className="mb-20 max-md:mb-16">
+      <SideProjectsMinimalUI projects={resumeData.sideProjects} />
+    </section>
+  );
 }

@@ -460,7 +460,8 @@ export const resumeData: ResumeData = {
       technologies: ["Next.js", "TypeScript", "Charts"],
       url: "https://fin-cal.quanvo.dev",
       githubUrl: "https://github.com/votrungquan1999/finance-calculator",
-      ogImageUrl: "https://finance-calculator-lac.vercel.app/finance_cal_og.png",
+      ogImageUrl:
+        "https://finance-calculator-lac.vercel.app/finance_cal_og.png",
     },
   ] as const,
 };
