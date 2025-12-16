@@ -77,6 +77,17 @@ export interface Testimonial {
   content: string;
 }
 
+export interface SideProject {
+  name: string;
+  category: "Business Websites" | "Developer Tools" | "Personal Projects";
+  description: string; // Brief (3-5 words) for minimal view
+  fullDescription: string; // Rich description for /projects page
+  technologies: readonly string[];
+  url: string; // Live site URL
+  githubUrl?: string; // Optional GitHub URL
+  ogImageUrl?: string; // OG image URL
+}
+
 export interface ResumeData {
   name: string;
   title: string;
@@ -91,6 +102,7 @@ export interface ResumeData {
   freelanceWork: FreelanceWork[];
   education: Education;
   testimonials?: Testimonial[];
+  sideProjects: readonly SideProject[];
 }
 
 export const resumeData: ResumeData = {
@@ -394,4 +406,61 @@ export const resumeData: ResumeData = {
     honors: ["Dean's List"],
   },
   testimonials: [],
+  sideProjects: [
+    {
+      name: "Nghiep Hung Website",
+      category: "Business Websites",
+      description: "Modern business website",
+      fullDescription:
+        "Modern business website for Nghiep Hung, a company specializing in air duct systems. Built with Next.js 15, TypeScript, and MongoDB with AWS S3 for media storage.",
+      technologies: ["Next.js", "TypeScript", "MongoDB", "AWS S3"],
+      url: "https://nghiephung.vn",
+      githubUrl: "https://github.com/votrungquan1999/nghiep-hung-website",
+      ogImageUrl: "/placeholder-gtu1v.png",
+    },
+    {
+      name: "Stem Venture Landing",
+      category: "Business Websites",
+      description: "EdTech platform landing page",
+      fullDescription:
+        "Landing page for Stem Venture, an educational technology platform. Designed to showcase the platform's value proposition with clean, modern design.",
+      technologies: ["Next.js", "TypeScript"],
+      url: "https://stem-venture.com",
+      githubUrl: "https://github.com/votrungquan1999/stemventure-landing-page",
+      ogImageUrl: "https://www.stem-venture.com/stemventure-interior.png",
+    },
+    {
+      name: "Stem Venture App",
+      category: "Business Websites",
+      description: "EdTech application platform",
+      fullDescription:
+        "Main application platform for Stem Venture, providing educational tools and resources. Features user authentication, course management, and interactive learning experiences.",
+      technologies: ["Next.js", "TypeScript"],
+      url: "https://app.stem-venture.com",
+      githubUrl: "https://github.com/votrungquan1999/stem-venture-router",
+      ogImageUrl: "https://app.stem-venture.com/og-image.png",
+    },
+    {
+      name: "AI Rules Setup",
+      category: "Developer Tools",
+      description: "CLI for AI agent rules",
+      fullDescription:
+        "Command-line interface tool for managing AI agent rules and configurations across multiple projects. Streamlines the setup process for AI-powered development tools.",
+      technologies: ["TypeScript", "Next.js", "MongoDB", "CLI"],
+      url: "https://ai-rules-setup.vercel.app",
+      githubUrl: "https://github.com/votrungquan1999/ai-rules-setup",
+      ogImageUrl: "/placeholder-gtu1v.png",
+    },
+    {
+      name: "Finance Calculator",
+      category: "Personal Projects",
+      description: "Loan and investment calculator",
+      fullDescription:
+        "Interactive financial calculator for loans and investments with visual charts and detailed breakdowns. Features amortization schedules, investment projections, and comparison tools.",
+      technologies: ["Next.js", "TypeScript", "Charts"],
+      url: "https://finance-calculator-lac.vercel.app",
+      githubUrl: "https://github.com/votrungquan1999/finance-calculator",
+      ogImageUrl: "https://finance-calculator-lac.vercel.app/og-image.jpg",
+    },
+  ] as const,
 };
