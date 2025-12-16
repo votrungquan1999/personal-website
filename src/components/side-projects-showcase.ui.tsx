@@ -68,9 +68,9 @@ export function SideProjectsShowcaseUI({
                       </CardDescription>
                     </CardHeader>
 
-                    <CardContent className="flex-1 space-y-4">
+                    <CardContent className="flex-1 flex flex-col">
                       {/* Technologies */}
-                      <div>
+                      <div className="mb-4">
                         <h4 className="text-sm font-semibold mb-2">
                           Technologies
                         </h4>
@@ -92,7 +92,7 @@ export function SideProjectsShowcaseUI({
                       </div>
 
                       {/* Action buttons */}
-                      <div className="flex gap-2 pt-2">
+                      <div className="flex gap-2 pt-2 mt-auto">
                         <Button asChild size="sm" className="flex-1">
                           <a
                             href={project.url}
