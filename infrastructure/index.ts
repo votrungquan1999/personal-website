@@ -17,7 +17,11 @@ console.log("🚀 Deploying DNS records and Vercel domain configuration...\n");
 
 // Step 1: Create DNS records in Cloudflare
 console.log("📋 Creating DNS records in Cloudflare...");
-const { apexRecord: _apexRecord, wwwRecord: _wwwRecord, subdomainRecords: _subdomainRecords } = createDnsRecords();
+const {
+  apexRecord: _apexRecord,
+  wwwRecord: _wwwRecord,
+  subdomainRecords: _subdomainRecords,
+} = createDnsRecords();
 
 // Step 2: Link main domains (apex + www) to personal website project
 console.log("🔗 Linking main domains to personal-website project...");

@@ -46,7 +46,7 @@ async function fetchOGImage(url: string): Promise<string | null> {
 
     for (const pattern of ogImagePatterns) {
       const match = html.match(pattern);
-      if (match && match[1]) {
+      if (match?.[1]) {
         let ogImage = match[1];
         // Make absolute URL if relative
         if (ogImage.startsWith("/")) {
@@ -85,7 +85,7 @@ async function main() {
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
 
-  console.log("\n" + "=".repeat(80));
+  console.log(`\n${"=".repeat(80)}`);
   console.log("Summary - Copy these to src/data/resume.ts:");
   console.log("=".repeat(80));
 
@@ -96,3 +96,6 @@ async function main() {
 }
 
 main();
+
+// Export empty object to make this file a module (avoids global scope conflicts)
+export {};
