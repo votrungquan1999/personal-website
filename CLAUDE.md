@@ -4,7 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A modern Next.js 16 personal website and portfolio built with React 19, Tailwind CSS v4, and shadcn/ui components. The site showcases professional experience, projects, achievements, and technical proficiency with a focus on accessibility and performance. Infrastructure is managed through Pulumi for automated deployment to Vercel with Cloudflare DNS.
+A modern Next.js 16 personal website and portfolio built with React 19, Tailwind CSS v4, and shadcn/ui components. The site showcases professional experience, projects, achievements, and technical proficiency with a focus on accessibility and performance. Comprehensive SEO setup includes OpenGraph/Twitter cards, dynamic sitemap, and optimized metadata. Infrastructure is managed through Pulumi for automated deployment to Vercel with Cloudflare DNS.
+
+## Repository Knowledge Base
+
+Detailed technical documentation is organized in `repo_knowledge/`:
+
+- **[architecture.md](repo_knowledge/architecture.md)** - Component patterns, import conventions, styling system, React setup
+- **[data-patterns.md](repo_knowledge/data-patterns.md)** - Content management, data structure, update workflows
+- **[infrastructure.md](repo_knowledge/infrastructure.md)** - Pulumi deployment, scripts, configuration
+
+**When to use**: Refer to these files for detailed implementation patterns, architecture decisions, and codebase conventions.
+
+**Note**: MUST update the documents when making changes related to the content of them
 
 ## Development Commands
 
@@ -64,6 +76,60 @@ This separation improves maintainability and makes components more testable.
 **Styling**: Uses Tailwind CSS v4 with shadcn/ui components (Radix UI primitives). Theme system via `next-themes` provides dark mode support with system preference detection.
 
 **Import Paths**: Uses `src/*` path aliasing configured in tsconfig.json. Always import using `src/` prefix (e.g., `import { resumeData } from "src/data/resume"`).
+
+### Routes
+
+The site has the following main routes:
+
+- **`/`** - Landing page with two-card grid layout:
+  - **"View Portfolio"** card → navigates to `/portfolio`
+  - **"Side Projects"** card → navigates to `/projects`
+  - Displays name and title from `resumeData`
+  - Theme toggle in top-right corner
+
+- **`/portfolio`** - Portfolio variant selector page:
+  - Shows 4 variant cards with descriptions
+  - Allows visitors to choose their preferred viewing format
+  - All variants contain the same data, just different layouts
+
+- **`/projects`** - Side projects showcase page:
+  - Full detailed view of all side projects
+  - Grouped by category (Business Websites, Developer Tools, Personal Projects)
+  - OG images, full descriptions, tech stacks, live site + GitHub links
+  - Header navigation: Back to Home button + View Portfolio button + Theme toggle
+  - Footer navigation: Links to Home and Portfolio + Copyright
+
+- **Variant Pages** (all follow same structure):
+  - **`/strength-first`** - Variant 1: Strength-focused bento layout
+  - **`/statement-driven`** - Variant 2: Philosophy-driven with proof points
+  - **`/story-led`** - Variant 3: Approach-focused with methodology
+  - **`/impact-dashboard`** - Variant 4: Metrics-first dashboard aesthetic
+
+**Variant Page Structure** (all 4 variants):
+```
+1. Controls: Theme toggle + Variant selector
+2. Variant-specific sections (Hero, Strengths, Problem-Solving, etc.)
+3. Side Projects (minimal list) ← "View All Projects" link → /projects
+4. Technical Proficiency
+5. Experience Timeline
+```
+
+**User Journey**:
+```
+/ (Landing)
+├─ "View Portfolio" → /portfolio → Choose variant → Variant page
+│                                                    ├─ Variant sections
+│                                                    ├─ Side Projects (minimal)
+│                                                    ├─ Tech Proficiency
+│                                                    └─ Experience
+│
+└─ "Side Projects" → /projects (full showcase)
+                     └─ Back button → /
+```
+
+**Featured vs. Side Projects**:
+- **Featured Projects** (Jerni, Bodimatch, Partners Portal, Cross-border) are showcased in variant pages with detailed metrics and achievements. These are internal company tools (not publicly accessible).
+- **Side Projects** are publicly accessible projects displayed on `/projects` page with live demos and GitHub links, plus minimal list on all variant pages.
 
 ### Infrastructure Architecture
 
@@ -130,6 +196,7 @@ Quan Vo is a **Senior Product Engineer** with a unique blend of product thinking
 ### Work Philosophy
 
 Quan approaches problems by:
+
 1. **Identifying root causes** rather than treating symptoms
 2. **Simplifying complexity** into manageable, user-friendly solutions
 3. **Delivering measurable outcomes** with sustainable, maintainable code
