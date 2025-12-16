@@ -447,7 +447,7 @@ export const resumeData: ResumeData = {
       fullDescription:
         "Command-line interface tool for managing AI agent rules and configurations across multiple projects. Streamlines the setup process for AI-powered development tools.",
       technologies: ["TypeScript", "Next.js", "MongoDB", "CLI"],
-      url: "https://ai-rules-setup.vercel.app",
+      url: "https://ai-rule.quanvo.dev",
       githubUrl: "https://github.com/votrungquan1999/ai-rules-setup",
       ogImageUrl: "/placeholder-gtu1v.png",
     },
@@ -458,9 +458,9 @@ export const resumeData: ResumeData = {
       fullDescription:
         "Interactive financial calculator for loans and investments with visual charts and detailed breakdowns. Features amortization schedules, investment projections, and comparison tools.",
       technologies: ["Next.js", "TypeScript", "Charts"],
-      url: "https://finance-calculator-lac.vercel.app",
+      url: "https://fin-cal.quanvo.dev",
       githubUrl: "https://github.com/votrungquan1999/finance-calculator",
-      ogImageUrl: "https://finance-calculator-lac.vercel.app/og-image.jpg",
+      ogImageUrl: "https://finance-calculator-lac.vercel.app/finance_cal_og.png",
     },
   ] as const,
 };
