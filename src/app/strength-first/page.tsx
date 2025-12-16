@@ -1,6 +1,7 @@
 import { V1Hero } from "src/components/v1-hero";
 import { V1StrengthBento } from "src/components/v1-strength-bento";
 import { V1ProblemSolving } from "src/components/v1-problem-solving";
+import { SideProjectsMinimal } from "src/components/side-projects-minimal";
 import { TechnicalProficiency } from "src/components/technical-proficiency";
 import { Experience } from "src/components/experience";
 import { ThemeToggle } from "src/components/theme-toggle";
@@ -27,6 +28,9 @@ export default function Variant1Page() {
 
         {/* Problem-Solving Approach: 3-step process */}
         <V1ProblemSolving />
+
+        {/* Side Projects: Minimal list with link to full page */}
+        <SideProjectsMinimal />
 
         {/* Technical Stack: Condensed view */}
         <TechnicalProficiency />

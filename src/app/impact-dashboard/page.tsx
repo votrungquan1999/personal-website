@@ -2,6 +2,7 @@ import { V4Hero } from "src/components/v4-hero";
 import { V4ImpactAtGlance } from "src/components/v4-impact-at-glance";
 import { V4Methodology } from "src/components/v4-methodology";
 import { V4StrengthsProjects } from "src/components/v4-strengths-projects";
+import { SideProjectsMinimal } from "src/components/side-projects-minimal";
 import { TechnicalProficiency } from "src/components/technical-proficiency";
 import { Experience } from "src/components/experience";
 import { ThemeToggle } from "src/components/theme-toggle";
@@ -31,6 +32,9 @@ export default function Variant4Page() {
 
         {/* Strengths + Projects: Side-by-side pairing */}
         <V4StrengthsProjects />
+
+        {/* Side Projects: Minimal list with link to full page */}
+        <SideProjectsMinimal />
 
         {/* Technical Toolbox */}
         <TechnicalProficiency />

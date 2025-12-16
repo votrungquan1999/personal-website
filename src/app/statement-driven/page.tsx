@@ -3,6 +3,7 @@ import { V2ProofPoints } from "src/components/v2-proof-points";
 import { V2Philosophy } from "src/components/v2-philosophy";
 import { V2CoreStrengths } from "src/components/v2-core-strengths";
 import { V2FeaturedProjects } from "src/components/v2-featured-projects";
+import { SideProjectsMinimal } from "src/components/side-projects-minimal";
 import { TechnicalProficiency } from "src/components/technical-proficiency";
 import { Experience } from "src/components/experience";
 import { ThemeToggle } from "src/components/theme-toggle";
@@ -35,6 +36,9 @@ export default function Variant2Page() {
 
         {/* Featured Projects: 3 highlighted */}
         <V2FeaturedProjects />
+
+        {/* Side Projects: Minimal list with link to full page */}
+        <SideProjectsMinimal />
 
         {/* Technical Stack: Condensed view */}
         <TechnicalProficiency />

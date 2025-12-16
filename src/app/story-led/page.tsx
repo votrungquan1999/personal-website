@@ -2,6 +2,7 @@ import { V3Hero } from "src/components/v3-hero";
 import { V3Approach } from "src/components/v3-approach";
 import { V3WhatThisMeans } from "src/components/v3-what-this-means";
 import { V3ProofInAction } from "src/components/v3-proof-in-action";
+import { SideProjectsMinimal } from "src/components/side-projects-minimal";
 import { TechnicalProficiency } from "src/components/technical-proficiency";
 import { Experience } from "src/components/experience";
 import { ThemeToggle } from "src/components/theme-toggle";
@@ -31,6 +32,9 @@ export default function Variant3Page() {
 
         {/* Proof in Action: Projects grouped by outcome */}
         <V3ProofInAction />
+
+        {/* Side Projects: Minimal list with link to full page */}
+        <SideProjectsMinimal />
 
         {/* Technical Foundation: Enablers */}
         <TechnicalProficiency />
