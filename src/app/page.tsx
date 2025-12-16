@@ -30,25 +30,50 @@ export default function Home() {
           </p>
         </div>
 
-        <Card className="border-border shadow-lg max-w-md w-full hover:shadow-xl transition-shadow">
-          <CardHeader>
-            <CardTitle className="text-2xl">View Portfolio</CardTitle>
-            <CardDescription className="text-base">
-              Choose how you'd like to explore my work
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button asChild size="lg" className="w-full group">
-              <Link
-                href="/portfolio"
-                className="flex items-center justify-center gap-2"
+        <div className="grid gap-4 sm:grid-cols-2 max-w-2xl w-full">
+          {/* Portfolio Card */}
+          <Card className="border-border shadow-lg hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-xl">View Portfolio</CardTitle>
+              <CardDescription>Explore my work and experience</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button asChild size="lg" className="w-full group">
+                <Link
+                  href="/portfolio"
+                  className="flex items-center justify-center gap-2"
+                >
+                  Get Started
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          {/* Projects Card */}
+          <Card className="border-border shadow-lg hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-xl">Side Projects</CardTitle>
+              <CardDescription>Explore my personal projects</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="w-full group"
               >
-                Get Started
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </CardContent>
-        </Card>
+                <Link
+                  href="/projects"
+                  className="flex items-center justify-center gap-2"
+                >
+                  View Projects
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
 
         <div className="mt-8 text-sm text-muted-foreground">
           More sections coming soon
