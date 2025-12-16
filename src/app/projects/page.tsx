@@ -1,5 +1,6 @@
 import { SideProjectsShowcase } from "src/components/side-projects-showcase";
 import { ThemeToggle } from "src/components/theme-toggle";
+import { Footer } from "src/components/footer";
 import Link from "next/link";
 import { Button } from "src/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -36,25 +37,7 @@ export default function ProjectsPage() {
         <SideProjectsShowcase />
 
         {/* Footer navigation */}
-        <footer className="mt-16 pt-8 border-t border-border">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex gap-4">
-              <Link
-                href="/"
-                className="hover:text-foreground transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/portfolio"
-                className="hover:text-foreground transition-colors"
-              >
-                Portfolio
-              </Link>
-            </div>
-            <p>© {new Date().getFullYear()} Quan Vo. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   );

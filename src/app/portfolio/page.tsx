@@ -1,5 +1,6 @@
 import { ThemeToggle } from "src/components/theme-toggle";
 import { PortfolioSelector } from "src/components/portfolio-selector";
+import { Footer } from "src/components/footer";
 
 /**
  * Portfolio Selector Page
@@ -7,8 +8,8 @@ import { PortfolioSelector } from "src/components/portfolio-selector";
  */
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <main className="container mx-auto max-w-6xl px-8 py-12 flex flex-col items-center justify-center min-h-screen">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <main className="container mx-auto max-w-6xl px-8 py-12 flex-1 flex flex-col items-center justify-center">
         <div className="w-full flex justify-end mb-8">
           <ThemeToggle />
         </div>
@@ -22,6 +23,10 @@ export default function PortfolioPage() {
 
         <PortfolioSelector />
       </main>
+
+      <div className="container mx-auto max-w-6xl px-8 pb-12">
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "src/components/ui/card";
 import { ThemeToggle } from "src/components/theme-toggle";
+import { Footer } from "src/components/footer";
 import { resumeData } from "src/data/resume";
 import { ArrowRight } from "lucide-react";
 
@@ -16,8 +17,8 @@ import { ArrowRight } from "lucide-react";
  */
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <main className="container mx-auto max-w-6xl px-8 py-12 flex flex-col items-center justify-center min-h-screen">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <main className="container mx-auto max-w-6xl px-8 py-12 flex-1 flex flex-col items-center justify-center">
         <div className="w-full flex justify-end mb-8">
           <ThemeToggle />
         </div>
@@ -79,6 +80,10 @@ export default function Home() {
           More sections coming soon
         </div>
       </main>
+
+      <div className="container mx-auto max-w-6xl px-8 pb-12">
+        <Footer />
+      </div>
     </div>
   );
 }

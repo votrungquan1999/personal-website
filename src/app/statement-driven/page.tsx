@@ -8,6 +8,7 @@ import { TechnicalProficiency } from "src/components/technical-proficiency";
 import { Experience } from "src/components/experience";
 import { ThemeToggle } from "src/components/theme-toggle";
 import { VariantSelector } from "src/components/variant-selector";
+import { Footer } from "src/components/footer";
 
 /**
  * Variant 2: Statement-Driven
@@ -45,6 +46,9 @@ export default function Variant2Page() {
 
         {/* Experience Timeline */}
         <Experience />
+
+        {/* Footer */}
+        <Footer />
       </main>
     </div>
   );

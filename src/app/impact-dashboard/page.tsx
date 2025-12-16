@@ -7,6 +7,7 @@ import { TechnicalProficiency } from "src/components/technical-proficiency";
 import { Experience } from "src/components/experience";
 import { ThemeToggle } from "src/components/theme-toggle";
 import { VariantSelector } from "src/components/variant-selector";
+import { Footer } from "src/components/footer";
 
 /**
  * Variant 4: Impact Dashboard
@@ -41,6 +42,9 @@ export default function Variant4Page() {
 
         {/* Experience Timeline */}
         <Experience />
+
+        {/* Footer */}
+        <Footer />
       </main>
     </div>
   );
