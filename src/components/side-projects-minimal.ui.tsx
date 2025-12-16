@@ -36,7 +36,7 @@ export function SideProjectsMinimalUI({
           >
             {/* OG Image thumbnail */}
             {project.ogImageUrl && (
-              <div className="relative w-20 h-14 flex-shrink-0 overflow-hidden rounded">
+              <div className="relative w-20 h-14 shrink-0 overflow-hidden rounded">
                 <Image
                   src={project.ogImageUrl}
                   alt={`${project.name} preview`}
@@ -52,7 +52,7 @@ export function SideProjectsMinimalUI({
                 <h3 className="font-semibold text-base truncate">
                   {project.name}
                 </h3>
-                <Badge variant="outline" className="text-xs flex-shrink-0">
+                <Badge variant="outline" className="text-xs shrink-0">
                   {project.category}
                 </Badge>
               </div>
@@ -67,7 +67,7 @@ export function SideProjectsMinimalUI({
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 flex-shrink-0"
+                className="flex items-center gap-1 shrink-0"
               >
                 <ExternalLink className="h-4 w-4" />
                 Visit
