@@ -462,5 +462,15 @@ export const resumeData: ResumeData = {
       githubUrl: "https://github.com/votrungquan1999/finance-calculator",
       ogImageUrl: "https://fin-cal.quanvo.dev/finance_cal_og.png",
     },
+    {
+      name: "Web Resume Builder",
+      category: "Personal Projects",
+      description: "Easy resume edit and download",
+      fullDescription:
+        "Resume builder web application with easy editing interface and PDF download functionality. Built for quick resume updates and professional document generation.",
+      technologies: ["Next.js", "Shadcn UI", "v0"],
+      url: "https://resume.quanvo.dev",
+      githubUrl: "https://github.com/votrungquan1999/web-resume",
+    },
   ] as const,
 };

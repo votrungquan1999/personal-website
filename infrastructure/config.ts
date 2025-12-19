@@ -80,6 +80,13 @@ export const config: Config = {
         description: "AI Rule Project",
         vercelProjectName: "ai-rules-setup",
       },
+      {
+        name: "resume",
+        fullDomain: "resume.quanvo.dev",
+        type: "CNAME",
+        description: "Web Resume Builder",
+        vercelProjectName: "v0-resume-web-version",
+      },
     ],
   },
 };
