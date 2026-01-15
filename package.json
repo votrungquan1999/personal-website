@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "pulumi:up": "cd infrastructure && pulumi up --yes",
-    "pulumi:preview": "cd infrastructure && pulumi preview",
-    "pulumi:destroy": "cd infrastructure && pulumi destroy"
+    "pulumi:up": "bun run infrastructure/scripts/deploy.ts up --yes",
+    "pulumi:preview": "bun run infrastructure/scripts/deploy.ts preview",
+    "pulumi:destroy": "bun run infrastructure/scripts/deploy.ts destroy"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",

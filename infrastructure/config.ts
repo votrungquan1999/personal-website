@@ -87,6 +87,13 @@ export const config: Config = {
         description: "Web Resume Builder",
         vercelProjectName: "v0-resume-web-version",
       },
+      {
+        name: "lessons",
+        fullDomain: "lessons.quanvo.dev",
+        type: "CNAME",
+        description: "Lesson Planning Tool",
+        vercelProjectName: "lesson-planning",
+      },
     ],
   },
 };
