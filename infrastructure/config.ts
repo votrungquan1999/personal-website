@@ -94,6 +94,13 @@ export const config: Config = {
         description: "Lesson Planning Tool",
         vercelProjectName: "lesson-planning",
       },
+      {
+        name: "poker-dealer",
+        fullDomain: "poker-dealer.quanvo.dev",
+        type: "CNAME",
+        description: "Poker Dealer",
+        vercelProjectName: "poker-dealer",
+      },
     ],
   },
 };

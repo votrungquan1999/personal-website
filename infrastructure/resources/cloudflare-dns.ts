@@ -20,11 +20,11 @@ export function createDnsRecords() {
    * Uses A record pointing to Vercel IP
    * proxied = false (DNS-only mode, gray cloud)
    */
-  const apexDnsRecord = new cloudflare.Record("apex-dns-record", {
+  const apexDnsRecord = new cloudflare.DnsRecord("apex-dns-record", {
     zoneId: config.cloudflare.zoneId,
     name: "@", // @ represents the apex domain
     type: "A",
-    value: vercelApexIP,
+    content: vercelApexIP,
     ttl: 1, // Auto TTL (1 = automatic)
     proxied: false, // DNS-only mode (gray cloud) - CRITICAL: Must be false for Vercel
   });
@@ -34,11 +34,11 @@ export function createDnsRecords() {
    * Uses CNAME pointing to Vercel CNAME target
    * proxied = false (DNS-only mode, gray cloud)
    */
-  const wwwDnsRecord = new cloudflare.Record("www-dns-record", {
+  const wwwDnsRecord = new cloudflare.DnsRecord("www-dns-record", {
     zoneId: config.cloudflare.zoneId,
     name: "www",
     type: "CNAME",
-    value: vercelCnameTarget,
+    content: vercelCnameTarget,
     ttl: 1, // Auto TTL (1 = automatic)
     proxied: false, // DNS-only mode (gray cloud) - CRITICAL: Must be false for Vercel
   });
@@ -48,11 +48,11 @@ export function createDnsRecords() {
    * Each subdomain gets a CNAME pointing to Vercel
    */
   const subdomainRecords = config.dns.subdomains.map((subdomain) => {
-    return new cloudflare.Record(`${subdomain.name}-dns-record`, {
+    return new cloudflare.DnsRecord(`${subdomain.name}-dns-record`, {
       zoneId: config.cloudflare.zoneId,
       name: subdomain.name,
       type: "CNAME",
-      value: vercelCnameTarget,
+      content: vercelCnameTarget,
       ttl: 1, // Auto TTL (1 = automatic)
       proxied: false, // DNS-only mode (gray cloud) - CRITICAL: Must be false for Vercel
     });
