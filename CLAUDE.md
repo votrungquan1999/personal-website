@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A modern Next.js 16 personal website and portfolio built with React 19, Tailwind CSS v4, and shadcn/ui components. The site showcases professional experience, projects, achievements, and technical proficiency with a focus on accessibility and performance. Comprehensive SEO setup includes OpenGraph/Twitter cards, dynamic sitemap, and optimized metadata. Infrastructure is managed through Pulumi for automated deployment to Vercel with Cloudflare DNS.
+A modern Next.js 16 personal website and portfolio built with React 19, Tailwind CSS v4, and shadcn/ui components. The site showcases professional experience, projects, achievements, and technical proficiency with a focus on accessibility and performance. Comprehensive SEO setup includes OpenGraph/Twitter cards, dynamic sitemap, and optimized metadata. This repo is app code only — it deploys via Vercel's native Git integration. DNS, domains, and Vercel project config live in a separate IaC repo: https://github.com/votrungquan1999/personal-infra
 
 ## Repository Knowledge Base
 
@@ -37,24 +37,12 @@ npm run lint       # Check code quality
 npm run format     # Format code with Biome
 ```
 
-### Infrastructure Commands
+### Infrastructure
 
-```bash
-# Full deployment (Vercel + Cloudflare DNS)
-npm run pulumi:up
-
-# Preview infrastructure changes
-npm run pulumi:preview
-
-# Destroy infrastructure
-npm run pulumi:destroy
-
-# Individual deployments (from infrastructure/)
-bun run infrastructure/scripts/deploy-vercel.ts up
-bun run infrastructure/scripts/deploy-cloudflare.ts up
-```
-
-Infrastructure scripts support: `preview`, `up`, `destroy`, `refresh`
+Infrastructure (Cloudflare DNS, Vercel projects + domains) is **no longer in this
+repo**. It lives in https://github.com/votrungquan1999/personal-infra and
+auto-deploys on push (PR → preview, merge → apply). This app deploys via Vercel's
+native Git integration — pushing the production branch triggers a Vercel build.
 
 ## Development Workflow
 
@@ -133,19 +121,14 @@ The site has the following main routes:
 
 ### Infrastructure Architecture
 
-**Pulumi IaC**: The infrastructure code is modular and environment-variable controlled:
+Infrastructure as Code lives in a **separate repo**:
+https://github.com/votrungquan1999/personal-infra (Pulumi/TypeScript). It manages
+Cloudflare DNS plus all personal Vercel projects, their GitHub connections, and
+custom domains. See [repo_knowledge/infrastructure.md](repo_knowledge/infrastructure.md).
 
-- `infrastructure/index.ts`: Main entry point that checks `DEPLOY_VERCEL` and `DEPLOY_CLOUDFLARE` env vars
-- `infrastructure/resources/`: Separate resource modules for Vercel (project, domains, deployment) and Cloudflare DNS
-- `infrastructure/scripts/`: Bun scripts that set env vars to control deployment scope
-- `infrastructure/config.ts`: Configuration values including domain and Cloudflare zone ID
-
-**Deployment Flow**:
-
-1. Bun scripts automatically load `.env` from project root
-2. Scripts set environment variables to control which resources deploy
-3. Pulumi creates/updates Vercel project and Cloudflare DNS records
-4. DNS records use `proxied = false` (required for Vercel integration)
+**This app's deployment**: Vercel's native Git integration builds and deploys on
+push to the production branch. Environment variables/secrets are set in the Vercel
+dashboard, not in IaC.
 
 ## Key Technologies
 
@@ -154,7 +137,7 @@ The site has the following main routes:
 - **Styling**: Tailwind CSS v4 (using @tailwindcss/postcss)
 - **UI Components**: shadcn/ui built on Radix UI primitives
 - **Linting/Formatting**: Biome (replaces ESLint + Prettier)
-- **Infrastructure**: Pulumi with TypeScript
+- **Infrastructure**: Managed in the separate `personal-infra` repo (Pulumi)
 - **Runtime**: Supports both Node.js 20+ and Bun
 
 ### TypeScript
